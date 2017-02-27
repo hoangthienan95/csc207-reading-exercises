@@ -1,0 +1,8 @@
+A.
+This line of code compiles and produce an output because both the implementation of the interface I and the implementation of the class C has the method foo(). Therefore, the output will be the string "C.foo"
+
+B
+This line of code does not compile and does not produce an output because the implementation of interface I, which is the type of the variable i, does not have the method bar()
+
+C
+The second line of code (B) demonstrates how precise subtyping is. (B) is a code snippet that is considered "safe" because the class C has the bar() method so theoretically it still should work. However, the compiler use the static type of i during the type checking phase of compilation. Therefore, when checking to see if bar() is a valid method call at compilation time, the compiler checks to see if interface I has a bar() method, rather checking the class C. Since bar() is not in implementation of I, the type checking fails.
