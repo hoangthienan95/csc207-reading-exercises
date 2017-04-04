@@ -1,0 +1,10 @@
+private static void  printInorderH(Node<T> cur) {
+if (cur == null) {
+return 0;
+} else{
+printInorderH(cur.left);
+System.out.println(cur.value);
+printInorderH(cur.right);
+}
+}
+public void printInorder() { printInorderH(root); }
